@@ -1,16 +1,15 @@
 package ru.netology.services;
 
-
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-public class GameTest {
+public class GameMapTest {
 
     @Test
     public void firstPlayerWin() {
         Player jorik = new Player(1, "Жорик", 80);
         Player diego = new Player(2, "Диего", 150);
-        Game game = new Game();
+        GameMap game = new GameMap();
 
         game.register(jorik);
         game.register(diego);
@@ -25,7 +24,7 @@ public class GameTest {
     public void firstPlayerLose() {
         Player jorik = new Player(1, "Жорик", 200);
         Player diego = new Player(2, "Диего", 50);
-        Game game = new Game();
+        GameMap game = new GameMap();
 
         game.register(jorik);
         game.register(diego);
@@ -40,7 +39,7 @@ public class GameTest {
     public void nobodyWins() {
         Player jorik = new Player(1, "Жорик", 200);
         Player diego = new Player(2, "Диего", 200);
-        Game game = new Game();
+        GameMap game = new GameMap();
 
         game.register(jorik);
         game.register(diego);
@@ -55,7 +54,7 @@ public class GameTest {
     public void notRegExceptionsTestIfFirst() {
         Player jorik = new Player(1, "Жорик", 200);
         Player diego = new Player(2, "Диего", 200);
-        Game game = new Game();
+        GameMap game = new GameMap();
 
         game.register(jorik);
         game.register(diego);
@@ -68,7 +67,7 @@ public class GameTest {
     public void notRegExceptionsTestIfSecond() {
         Player jorik = new Player(1, "Жорик", 200);
         Player diego = new Player(2, "Диего", 200);
-        Game game = new Game();
+        GameMap game = new GameMap();
 
         game.register(jorik);
         game.register(diego);
@@ -81,7 +80,7 @@ public class GameTest {
     public void notRegExceptionsTestIfBoth() {
         Player jorik = new Player(1, "Жорик", 200);
         Player diego = new Player(2, "Диего", 200);
-        Game game = new Game();
+        GameMap game = new GameMap();
 
         game.register(jorik);
         game.register(diego);
@@ -89,4 +88,6 @@ public class GameTest {
                 () -> game.round("Санчес", "Хуанито"));
 
     }
+
+
 }
